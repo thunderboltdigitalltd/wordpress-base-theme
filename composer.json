@@ -2,6 +2,7 @@
   "name": "thunderboltdigital/theme",
   "description": "description",
   "license": "proprietary",
+  "type": "wordpress-theme",
   "authors": [
     {
       "name": "Nick Fairchild",
