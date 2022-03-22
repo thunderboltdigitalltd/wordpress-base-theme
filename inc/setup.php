@@ -46,6 +46,12 @@ add_action('after_setup_theme', function () {
             'flex-height' => true,
         ]
     );
+    if (
+        class_exists('WooCommerce')
+        && in_array('woocommerce', (array) get_option('active_plugins', []), true)
+    ) {
+        add_theme_support('woocommerce');
+    }
 }, 20);
 
 add_action('after_setup_theme', function () {
