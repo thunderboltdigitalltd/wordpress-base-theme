@@ -1,0 +1,13 @@
+@layer base {
+    #main-menu li {
+        @apply flex;
+    }
+
+    #main-menu li > a {
+        @apply border-transparent text-black hover:border-black hover:text-white transition inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium;
+    }
+
+    #main-menu li > a.current-menu-item {
+        @apply border-black text-black;
+    }
+}

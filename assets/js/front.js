@@ -5,4 +5,3 @@ window.Alpine = Alpine
 document.addEventListener('DOMContentLoaded', () => {
     Alpine.start()
 })
-
