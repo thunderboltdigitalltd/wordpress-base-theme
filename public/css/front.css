@@ -596,11 +596,11 @@ select{
   outline: 1px auto -webkit-focus-ring-color;
 }
 
-#main-menu li{
+#menu-main li{
   display: flex;
 }
 
-#main-menu li > a{
+#menu-main li > a{
   display: inline-flex;
   align-items: center;
   border-bottom-width: 2px;
@@ -620,7 +620,7 @@ select{
   transition-duration: 150ms;
 }
 
-#main-menu li > a:hover{
+#menu-main li > a:hover{
   --tw-border-opacity: 1;
   border-color: rgb(13 13 13 / var(--tw-border-opacity));
   --tw-text-opacity: 1;
