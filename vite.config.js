@@ -10,8 +10,8 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/css/front.css',
-                'resources/js/front.js',
+                'assets/css/front.css',
+                'assets/js/front.js',
             ],
             refresh: [
                 './templates/**/*.php',
