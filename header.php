@@ -10,6 +10,7 @@
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 
+    <?= vite(['assets/css/front.css', 'assets/js/front.js']) ?>
     <?php wp_head(); ?>
 </head>
 

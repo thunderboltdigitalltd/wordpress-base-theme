@@ -2,15 +2,8 @@
   "name": "theme",
   "private": true,
   "scripts": {
-    "dev": "yarn run development && yarn run css",
-    "development": "mix",
-    "css": "npx tailwindcss -i ./assets/css/front.css -o ./public/css/front.css --postcss postcss.config.js --watch",
-    "watch": "concurrently \"yarn run css\" \"mix watch\"",
-    "watch-poll": "mix watch -- --watch-options-poll=1000",
-    "hot": "mix watch --hot",
-    "build:css": "NODE_ENV=production tailwindcss -i ./assets/css/front.css -o ./public/css/front.css --postcss postcss.config.js -m",
-    "prod": "yarn run build:css && yarn run production",
-    "production": "mix --production"
+      "dev": "vite",
+      "build": "vite build"
   },
   "devDependencies": {
     "@glidejs/glide": "^3.5.2",
@@ -20,17 +13,15 @@
     "@tailwindcss/typography": "^0.5.0",
     "alpinejs": "^3.7.1",
     "autoprefixer": "^10.4.2",
-    "concurrently": "^7.0.0",
-    "cross-env": "^7.0.3",
-    "cssnano": "^5.0.15",
     "gsap": "^3.9.1",
-    "laravel-mix": "^6.0.39",
+    "laravel-vite-plugin": "^0.5.0",
     "locomotive-scroll": "^4.1.4",
     "postcss": "^8.4.5",
     "postcss-import": "^14.0.2",
     "postcss-nested": "^5.0.6",
     "scrollmagic": "^2.0.8",
     "scrollmagic-plugin-gsap": "^1.0.4",
-    "tailwindcss": "^3.0.15"
+    "tailwindcss": "^3.0.15",
+    "vite": "^3.0.0"
   }
 }
