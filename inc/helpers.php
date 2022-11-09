@@ -5,7 +5,7 @@ use Illuminate\Support\Collection;
 use Symfony\Component\VarDumper\VarDumper;
 
 if (! function_exists('collect')) {
-    function collect(array $items): Collection
+    function collect(array $items = []): Collection
     {
         return Collection::make($items);
     }
@@ -38,5 +38,11 @@ if (! function_exists('today')) {
     function today($tz = null): Carbon
     {
         return Carbon::today($tz);
+    }
+}
+
+if (! function_exists('vite')) {
+    function vite($entrypoints) {
+        return (new \TB\Vite)($entrypoints);
     }
 }
