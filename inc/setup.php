@@ -3,7 +3,7 @@
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style(
         'fonts',
-        'https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Red+Hat+Display:wght@400;700&display=swap',
+        'https://fonts.bunny.net/css?family=Montserrat:wght@500&family=Red+Hat+Display:wght@400;700&display=swap',
         [],
         null
     );
@@ -41,7 +41,7 @@ add_action('after_setup_theme', function () {
     );
     if (
         class_exists('WooCommerce')
-        && in_array('woocommerce', (array) get_option('active_plugins', []), true)
+        && in_array('woocommerce', (array)get_option('active_plugins', []), true)
     ) {
         add_theme_support('woocommerce');
     }
@@ -52,6 +52,7 @@ add_action('after_setup_theme', function () {
         'main-menu' => __('Main Menu', ''),
         'mobile-menu' => __('Mobile Menu', ''),
         'footer-menu' => __('Footer Menu', ''),
+        'legal-menu' => __('Legal Menu', ''),
     ]);
 }, 20);
 

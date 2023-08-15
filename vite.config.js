@@ -1,10 +1,5 @@
-import fs from 'fs';
 import {defineConfig} from 'vite';
 import laravel from 'laravel-vite-plugin';
-import {homedir} from 'os'
-import {resolve} from 'path'
-
-let host = ':site_slug.test'
 
 export default defineConfig({
     plugins: [
@@ -14,35 +9,20 @@ export default defineConfig({
                 'assets/js/front.js',
             ],
             refresh: [
+                './components/**/*.php',
                 './templates/**/*.php',
                 './partials/**/*.php',
                 './inc/**/*.php',
                 './src/**/*.php',
                 './*.php',
             ],
+            valetTls: true,
+            detectTls: 'wordpress.test',
         }),
     ],
-    server: detectServerConfig(host),
+    resolve: {
+        alias: {
+            '@': '/assets/js',
+        }
+    }
 });
-
-function detectServerConfig(host) {
-    let keyPath = resolve(homedir(), `.config/valet/Certificates/${host}.key`)
-    let certificatePath = resolve(homedir(), `.config/valet/Certificates/${host}.crt`)
-
-    if (!fs.existsSync(keyPath)) {
-        return {}
-    }
-
-    if (!fs.existsSync(certificatePath)) {
-        return {}
-    }
-
-    return {
-        hmr: {host},
-        host,
-        https: {
-            key: fs.readFileSync(keyPath),
-            cert: fs.readFileSync(certificatePath),
-        },
-    }
-}

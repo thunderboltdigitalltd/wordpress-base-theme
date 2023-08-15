@@ -1,10 +1,8 @@
 <?php get_header(); ?>
 
-    <main class="container py-12">
-        <?php if (have_posts()) : ?>
-            <?php while (have_posts()) : the_post(); ?>
-                <?php the_title() ?>
-            <?php endwhile; ?>
+    <main class="pt-[56px]">
+        <?php if (has_flexible('component')) : ?>
+            <?php the_flexible('component'); ?>
         <?php endif; ?>
     </main>
 

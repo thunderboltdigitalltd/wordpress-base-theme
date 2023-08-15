@@ -1,12 +1,5 @@
-@charset "UTF-8";
-
 @import "tailwindcss/base";
-@import "_locomotive.css";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
 @import "_nav.css";
-
-[x-cloak] {
-    display: none !important;
-}

@@ -4,17 +4,16 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="profile" href="https://gmpg.org/xfn/11">
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="preconnect" href="https://fonts.bunny.net">
 
     <?= vite(['assets/css/front.css', 'assets/js/front.js']) ?>
     <?php wp_head(); ?>
 </head>
 
-<body class="overflow-x-hidden font-sans">
+<body <?php body_class(['overflow-x-hidden', 'font-sans', env('WP_ENV') === 'local' ? 'debug-screens' : '']) ?>>
 <div x-data x-cloak class="overflow-x-hidden">
     <nav x-data="{ mobileNavOpen: false }" class="bg-white shadow">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
