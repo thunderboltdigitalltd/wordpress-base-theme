@@ -6,6 +6,8 @@ import focus from '@alpinejs/focus'
 import 'focus-visible'
 import {toTop} from '@/back-to-top'
 
+import '../css/front.css'
+
 window.Alpine = Alpine
 
 Alpine.plugin([

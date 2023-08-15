@@ -5,7 +5,10 @@
     "src": "assets/css/front.css"
   },
   "assets/js/front.js": {
-    "file": "assets/front-dc0ea789.js",
+    "css": [
+      "assets/front-b0d61f7c.css"
+    ],
+    "file": "assets/front-b1bbceaf.js",
     "isEntry": true,
     "src": "assets/js/front.js"
   }

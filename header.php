@@ -9,11 +9,11 @@
     <link rel="profile" href="https://gmpg.org/xfn/11">
     <link rel="preconnect" href="https://fonts.bunny.net">
 
-    <?= vite(['assets/css/front.css', 'assets/js/front.js']) ?>
+    <?= vite(['assets/js/front.js']) ?>
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(['overflow-x-hidden', 'font-sans', env('WP_ENV') === 'local' ? 'debug-screens' : '']) ?>>
+<body <?php body_class(['overflow-x-hidden', 'font-sans', WP_ENV === 'local' ? 'debug-screens' : '']) ?>>
 <div x-data x-cloak class="overflow-x-hidden">
     <nav x-data="{ mobileNavOpen: false }" class="bg-white shadow">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
